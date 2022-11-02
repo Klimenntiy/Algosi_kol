@@ -5,6 +5,10 @@ class Node:
 
 
 class Meow:
+    def __init__(self):
+        self.tail = None
+        self.head = None
+        
     def push(self, data):
         node = Node(data)
         node.next = self.head
@@ -14,10 +18,6 @@ class Meow:
         current_data = self.head
         self.head = self.head.next
         return current_data.data
-
-    def __init__(self):
-        self.tail = None
-        self.head = None
 
     def dequeue(self):
         node = self.head
