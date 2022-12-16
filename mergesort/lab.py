@@ -8,7 +8,7 @@ def mergesort(a):
     left = mergesort(a[:mid])
     right = mergesort(a[mid:])
     while i < len(left) and j < len(right):
-        if left[i] > right[j]:
+        if left[i] >= right[j]:
             q.append(right[j])
             j += 1
         else:
